@@ -26,6 +26,7 @@ activador.addEventListener("click", ()=> {
     if(control) {
         menu.style.display = "flex"
         activador.style.color = "var(--bg-secondary)"
+        activador.style.position = "fixed";
         control = false
     } else if (!control) {
         menu.style.display = "none"
