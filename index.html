@@ -1,14 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./data/css/style.css">
-</head>
-<body>
-    
+    <title>Juan José Zapata | Desarrollador de software</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <i data-lucide="book-plus"></i> -->
+
+
+    <header>
+        <div id="presentacion">
+            <div class="informacion">
+                <div class="titulo">
+                    <h1>Juan Zapata, Desarrollador</h1>
+                    <h1>software</h1>
+                </div>
+                <p class="eslogan">Cambiando el mundo un paso a la vez</p>
+            </div>
+            <div class="navegacion-temporal">
+                <ul>
+                    <li class="item"><a href="#yo">conóceme</a></li>
+                    <li class="item"><a href="#proyectos">mis proyectos</a></li>
+                    <li class="item unico"><i data-lucide="coffee" class="asd"></i><a href="#conts">tomemos un café</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <nav id="todos">
+            <ul>
+                <li><a href="#" class="unik">Inicio</a></li>
+                <li id="sobreMI"><a href="#yo">Sobre mí</a></li>
+                <li><a href="#proyectos" class="unik">Proyectos</a></li>
+                <li><a href="#skills" class="unik">Skills</a></li>
+                <li><a href="#conts" class="unik">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <span>☰</span>
+        <nav id="celulares">
+            
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="#yo">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#conts">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="yo">
+            <h2>Hola mundo...</h2>
+            <div class="contenido">
+                <p>
+                    Me llamo Juan José Zapata, 19 años, desarrollador de <strong>software</strong> en crecimiento. Me
+                    apasiona la programación y la veo como un método para cumplir mis objetivos.
+                </p>
+                <p>
+                    Actualmente estudiando en el Sena, la carrera de <strong>Análisis y desarrollo</strong>
+                    aprendiendo nuevas metodologías y tecnologías para mi crecimiento como profesional.
+                </p>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>¿Qué he desarrollado?</h2>
+            <article class="carruaje">
+
+            </article>
+
+            <article class="general">
+                <div class="card">
+                    <h3>Temporales</h3>
+                    <p>He desarrollado uno que otro proyecto pequeño al inicio de mi carrera, lo más básico y esencial
+                        para entender tecnologías como manipulación del DOM, operación con variables, uso de librerías y
+                        demás</p>
+                 
+                    <div class="listado">
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="card especia">
+                        <h3>Weekly challenges</h3>
+                        <p>Una pequeña plataforma de desafíos y análisis de datos sobre temas orientados a los
+                            desarrolladores</p>
+                        <p>Actualmente anda en desarrollo pero muy pronto estará disponible para todo el público</p>
+                        <div class="listado">
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <h3>Portfolio</h3>
+                            <p>Sitio web donde pueden encontrar información de mi persona, habilidades y demás</p>
+                            <div class="listado">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+            </article>
+        </section>
+
+        <section id="skills">
+            <details>
+                <summary>Logica</summary>
+                <p>
+                    En el poco tiempo como desarrollador he pulido y practicado mi lógica algorítmica poco a poco,
+                    resolviendo desde problemas matemáticos hasta otros más cotidianos
+                </p>
+            </details>
+            <details>
+                <summary>Desarrollo backend</summary>
+                <p>
+                    He usado diferentes tecnologías en este lado del servidor, como podría ser Node.js o Flask, haciendo
+                    peticiones con JavaScript y conectándolas a una base de datos con phpMyAdmin
+                </p>
+            </details>
+            <details>
+                <summary>Frontend</summary>
+                <p>
+                    He creado una que otra página estática usando HTML y estilando con CSS, también he tanteado con
+                    frameworks como React y aprendiendo su estructura por componentes
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <section id="conts">
+            <ul>
+                <li><a href="https://github.com/fvfce">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/juan-jose-zapata-a49874440/">Linkedin</a></li>
+                <li><a href="">Gmail</a></li>
+                <li><a href="">Facebook</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
     <script src="./script.js"></script>
 </body>
+
 </html>
