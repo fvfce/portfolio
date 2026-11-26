@@ -1,36 +1,51 @@
-const activador = document.querySelector("span");
+const botonMenu = document.getElementById("boton-menu");
+const menuMovil = document.getElementById("nav-movil");
+const navEscritorio = document.getElementById("nav-escritorio");
 
-const menu = document.getElementById("celulares");
+const ANCHO_MOVIL = 600;
 
-const menu2 = document.getElementById("todos");
+function cerrarMenu() {
+    menuMovil.classList.remove("abierto");
+    botonMenu.classList.remove("abierto");
+    botonMenu.setAttribute("aria-expanded", "false");
+    botonMenu.setAttribute("aria-label", "Abrir menú");
+}
 
-let control = true
+function ajustarNavegacion() {
+    const esMovil = window.innerWidth <= ANCHO_MOVIL;
 
-const ancho = window.innerWidth;
+    botonMenu.style.display = esMovil ? "block" : "none";
+    navEscritorio.style.display = esMovil ? "none" : "flex";
 
-window.addEventListener("resize", () => {
+    if (!esMovil) cerrarMenu();
+}
 
-    if (window.innerWidth <= 500) {
-        activador.style.display = "block";
-        menu2.style.display = "none"
-    } else {
-        activador.style.display = "none";
-        menu2.style.display = "flex"
+function alternarMenu() {
+    const abrir = !menuMovil.classList.contains("abierto");
+
+    menuMovil.classList.toggle("abierto", abrir);
+    botonMenu.classList.toggle("abierto", abrir);
+    botonMenu.setAttribute("aria-expanded", String(abrir));
+    botonMenu.setAttribute("aria-label", abrir ? "Cerrar menú" : "Abrir menú");
+}
+
+// Aplica el estado correcto también en la carga inicial, no solo tras un resize.
+ajustarNavegacion();
+window.addEventListener("resize", ajustarNavegacion);
+
+botonMenu.addEventListener("click", alternarMenu);
+botonMenu.addEventListener("keydown", (evento) => {
+    if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        alternarMenu();
     }
-
 });
 
+// Cierra el menú al elegir un enlace o al pulsar Escape.
+menuMovil.querySelectorAll("a").forEach((enlace) => {
+    enlace.addEventListener("click", cerrarMenu);
+});
 
-
-activador.addEventListener("click", ()=> {
-    if(control) {
-        menu.style.display = "flex"
-        activador.style.color = "var(--bg-secondary)"
-        activador.style.position = "fixed";
-        control = false
-    } else if (!control) {
-        menu.style.display = "none"
-        control = true
-        activador.style.color = "#010c23e7";
-    }
-})
+document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape") cerrarMenu();
+});
